@@ -38,6 +38,7 @@ echo "Wrong password. <a href='changePass.php'>Click here to try again</a>";
 }
 
 } else {
-echo "x";
+  // Not logged in!
+header("Location: index.php");
 }
 } ?>
