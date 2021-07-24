@@ -15,7 +15,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 		}
 		
 	} else {
-		header("Location: index.php?err=3")
+		header("Location: index.php?err=3");
 	}
 	
 } else {
