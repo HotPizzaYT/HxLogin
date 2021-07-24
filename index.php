@@ -23,5 +23,8 @@ if(isset($_GET["err"])){
 	if($_GET["err"] === "2"){
 		echo "Error: Invalid password";
 	}
+	if($_GET["err"] === "3"){
+		echo "Error: That account does not exist";
+	}
 }
 ?>
