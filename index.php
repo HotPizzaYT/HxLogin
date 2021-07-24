@@ -18,7 +18,8 @@ header("Location: acc.php");
 <?php
 if(isset($_GET["err"])){
 	if($_GET["err"] === "1"){
-		echo "Error: User does not exist.";
+		// This will most likely never happen unless the user goes to log.php in their browser.
+		echo "Error: You did not fill in all forms";
 	}
 	if($_GET["err"] === "2"){
 		echo "Error: Invalid password";
