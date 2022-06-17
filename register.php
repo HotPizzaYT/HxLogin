@@ -17,7 +17,7 @@
 
 if(isset($_POST["username"]) && $_POST["username"] !== "" && isset($_POST["password"]) && $_POST["password"] !== "" && isset($_POST["email"]) && $_POST["email"] !== ""){
 	if(!file_exists("data/" . $_POST["username"] . ".json") && !preg_match_all('/([<>\[\]\(\).,\/\\&?$=!%^#* ])/', $_POST["username"])){
-	$passHash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+	$passHash = password_hash($_POST["password"], PASSWORD_ARGON2ID);
 	$details = array("username" => $_POST["username"], "password" => $passHash, "email" => $_POST["email"]);
 	$detailsEncoded = json_encode($details, true);
 	file_put_contents("data/" . $_POST["username"] . ".json", $detailsEncoded);
